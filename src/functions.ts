@@ -4,7 +4,8 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    const Celsius: GLfloat = (temperature - 32) * (5 / 9);
+    return Celsius;
 }
 
 /**
@@ -12,7 +13,24 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let x, y, z: GLfloat;
+    if (first > 0) {
+        x = first;
+    } else {
+        x = 0;
+    }
+    if (second > 0) {
+        y = second;
+    } else {
+        y = 0;
+    }
+    if (third > 0) {
+        z = third;
+    } else {
+        z = 0;
+    }
+    const add: GLfloat = x + y + z;
+    return add;
 }
 
 /**
@@ -20,7 +38,8 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    const yell: string = message.toUpperCase() + "!";
+    return yell;
 }
 
 /**
@@ -28,7 +47,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return Boolean(message.charAt(message.length - 1) === "?");
 }
 
 /**
@@ -37,5 +56,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word.toLowerCase() === "yes") {
+        return true;
+    }
+    if (word.toLowerCase() === "no") {
+        return false;
+    } else {
+        return null;
+    }
 }
