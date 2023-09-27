@@ -6,6 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/arrays.test.ts
+PASS src/objects.test.ts
 FAIL src/HtmlCss.test.tsx
   ● Some HTML Elements are added. › There is a header
 
@@ -303,17 +304,21 @@ FAIL src/text.test.tsx
       at Object.<anonymous> (src/text.test.tsx:7:26)
 
 PASS src/App.test.tsx
---------------|---------|----------|---------|---------|-------------------
-File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------|---------|----------|---------|---------|-------------------
-All files     |     100 |      100 |     100 |     100 |                   
- App.tsx      |     100 |      100 |     100 |     100 |                   
- arrays.ts    |     100 |      100 |     100 |     100 |                   
- functions.ts |     100 |      100 |     100 |     100 |                   
---------------|---------|----------|---------|---------|-------------------
+----------------|---------|----------|---------|---------|-------------------
+File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------|---------|----------|---------|---------|-------------------
+All files       |   99.15 |    97.56 |     100 |   99.13 |                   
+ src            |   99.15 |    97.56 |     100 |   99.13 |                   
+  App.tsx       |     100 |      100 |     100 |     100 |                   
+  arrays.ts     |     100 |      100 |     100 |     100 |                   
+  functions.ts  |     100 |      100 |     100 |     100 |                   
+  objects.ts    |   97.56 |       90 |     100 |   97.56 | 60                
+ src/interfaces |       0 |        0 |       0 |       0 |                   
+  question.ts   |       0 |        0 |       0 |       0 |                   
+----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 2 failed, 3 passed, 5 total
-Tests:       6 failed, 17 passed, 23 total
+Test Suites: 2 failed, 4 passed, 6 total
+Tests:       6 failed, 27 passed, 33 total
 Snapshots:   0 total
-Time:        3.332 s
+Time:        3.64 s
 Ran all test suites.
